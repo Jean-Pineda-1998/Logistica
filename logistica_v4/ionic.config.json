@@ -1,0 +1,7 @@
+{
+  "name": "logistica_v4",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
