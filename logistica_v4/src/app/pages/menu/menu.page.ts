@@ -84,6 +84,16 @@ export class MenuPage implements OnInit {
           icon: '',
         },
       ],
+    },
+    {
+      title: 'Factura',
+      children: [
+        {
+          title: 'Factura',
+          url: '/menu/factura',
+          icon: '',
+        }
+      ]
     }
   ];
 

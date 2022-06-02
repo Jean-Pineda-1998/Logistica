@@ -56,6 +56,10 @@ const routes: Routes = [
       {
         path: 'imprimir-e',
         loadChildren: () => import('../../pages/consultas/imprimir-e/imprimir-e.module').then( m => m.ImprimirEPageModule)
+      },
+      {
+        path: 'factura',
+        loadChildren: () => import('../../pages/factura/factura.module').then( m => m.FacturaPageModule)
       }
     ]
   }
