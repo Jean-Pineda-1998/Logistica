@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FacturaService } from './services/factura.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor() {}
+  // constructor(private facturaService: FacturaService) {
+
+  //   this.facturaService.postFactura()
+  //     .subscribe( resp =>{
+  //       console.log (resp);
+  //     });
+
+
+  // }
 }

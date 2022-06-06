@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 
 
 @Component({
@@ -97,9 +98,18 @@ export class MenuPage implements OnInit {
     }
   ];
 
-  constructor() { }
+  constructor( private barcodeScanner: BarcodeScanner ) { }
 
   ngOnInit() {
+  }
+
+  scan(){
+
+    this.barcodeScanner.scan().then(barcodeData => {
+      console.log('Barcode data', barcodeData);
+     }).catch(err => {
+         console.log('Error', err);
+     });
   }
 
 }

@@ -13,7 +13,12 @@
             <ion-item style="padding: 12px 0px 12px 0px">
                 <ion-row>
                     <ion-col>
-                        <ion-input placeholder="Bodega Origen"></ion-input>
+                        <ion-input placeholder="Bodega Origen">{{code}}</ion-input>
+                    </ion-col>
+                    <ion-col>
+                        <ion-button (click)="scan()">
+                            Escanear
+                        </ion-button>
                     </ion-col>
                 </ion-row>
             </ion-item>
@@ -21,7 +26,12 @@
             <ion-item style="padding: 12px 0px 12px 0px">
                 <ion-row>
                     <ion-col>
-                        <ion-input placeholder="Bodega Destino"></ion-input>
+                        <ion-input placeholder="Bodega Destino">{{code}}</ion-input>
+                    </ion-col>
+                    <ion-col>
+                        <ion-button (click)="scan()">
+                            Escanear
+                        </ion-button>
                     </ion-col>
                 </ion-row>
             </ion-item>
@@ -29,7 +39,12 @@
             <ion-item style="padding: 12px 0px 12px 0px">
                 <ion-row>
                     <ion-col>
-                        <ion-input placeholder="Articulo"></ion-input>
+                        <ion-input placeholder="Articulo">{{code}}</ion-input>
+                    </ion-col>
+                    <ion-col>
+                        <ion-button (click)="scan()">
+                            Escanear
+                        </ion-button>
                     </ion-col>
                 </ion-row>
             </ion-item>
@@ -37,13 +52,15 @@
             <ion-item style="padding: 12px 0px 12px 0px">
                 <ion-row>
                     <ion-col>
-                        <ion-input placeholder="Cantidad"></ion-input>
+                        <ion-input placeholder="Cantidad">{{code}}</ion-input>
+                    </ion-col>
+                    <ion-col>
+                        <ion-button (click)="scan()">
+                            Escanear
+                        </ion-button>
                     </ion-col>
                 </ion-row>
             </ion-item>
-
-
-
 
         </ion-list>
 

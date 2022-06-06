@@ -3,6 +3,14 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
+
+  url: 'https://fa-eshh-test-saasfaprod1.fa.ocs.oraclecloud.com',
+
+  userName: 'IntegrationUserERP',
+
+  passWord: 'icsJurasik$123',
+
+
   production: false
 };
 
