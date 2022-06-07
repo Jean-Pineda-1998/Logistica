@@ -13,12 +13,12 @@
         <ion-list>
             <ion-item style="padding: 12px 0px 12px 0px">
                 <ion-row>
-                    <ion-col>
+                    <ion-col size="9">
                         <ion-input placeholder="Bodega Origen">{{code0}}</ion-input>
                     </ion-col>
                     <ion-col>
-                        <ion-button (click)="scan0()">
-                            Escanear
+                        <ion-button (click)="scan0()" color="light" class="buttonScan">
+                            <ion-icon name="barcode"></ion-icon>
                         </ion-button>
                     </ion-col>
                 </ion-row>
@@ -26,12 +26,12 @@
 
             <ion-item style="padding: 12px 0px 12px 0px">
                 <ion-row>
-                    <ion-col>
+                    <ion-col size="9">
                         <ion-input placeholder="Bodega Destino">{{code1}}</ion-input>
                     </ion-col>
                     <ion-col>
-                        <ion-button (click)="scan1()">
-                            Escanear
+                        <ion-button (click)="scan1()" color="light" class="buttonScan">
+                            <ion-icon name="barcode"></ion-icon>
                         </ion-button>
                     </ion-col>
                 </ion-row>
@@ -39,12 +39,12 @@
 
             <ion-item style="padding: 12px 0px 12px 0px">
                 <ion-row>
-                    <ion-col>
+                    <ion-col size="9">
                         <ion-input placeholder="Ubicacion Origen">{{code2}}</ion-input>
                     </ion-col>
                     <ion-col>
-                        <ion-button (click)="scan2()">
-                            Escanear
+                        <ion-button (click)="scan2()" color="light" class="buttonScan">
+                            <ion-icon name="barcode"></ion-icon>
                         </ion-button>
                     </ion-col>
                 </ion-row>
@@ -52,12 +52,12 @@
 
             <ion-item style="padding: 12px 0px 12px 0px">
                 <ion-row>
-                    <ion-col>
+                    <ion-col size="9">
                         <ion-input placeholder="Ubicacion Destino">{{code3}}</ion-input>
                     </ion-col>
                     <ion-col>
-                        <ion-button (click)="scan3()">
-                            Escanear
+                        <ion-button (click)="scan3()" color="light" class="buttonScan ">
+                            <ion-icon name="barcode"></ion-icon>
                         </ion-button>
                     </ion-col>
                 </ion-row>
@@ -65,12 +65,12 @@
 
             <ion-item style="padding: 12px 0px 12px 0px">
                 <ion-row>
-                    <ion-col>
+                    <ion-col size="9">
                         <ion-input placeholder="Articulo">{{code4}}</ion-input>
                     </ion-col>
                     <ion-col>
-                        <ion-button (click)="scan4()">
-                            Escanear
+                        <ion-button (click)="scan4()" color="light" class="buttonScan ">
+                            <ion-icon name="barcode"></ion-icon>
                         </ion-button>
                     </ion-col>
                 </ion-row>
@@ -78,13 +78,13 @@
 
             <ion-item style="padding: 12px 0px 12px 0px">
                 <ion-row>
-                    <ion-col>
+                    <ion-col size="9">
                         <ion-input placeholder="Cantidad">{{code5}}</ion-input>
                     </ion-col>
                     <ion-col>
-                        <ion-button (click)="scan5()">
-                            Escanear
-                        </ion-button>
+                        <!-- <ion-button (click)="scan5()" color="light" class="buttonScan "> -->
+                        <ion-icon name="barcode" (click)="scan5()" class="buttonScan "></ion-icon>
+                        <!-- </ion-button> -->
                     </ion-col>
                 </ion-row>
             </ion-item>

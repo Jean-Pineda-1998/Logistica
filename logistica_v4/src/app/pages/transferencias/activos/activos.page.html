@@ -12,12 +12,12 @@
         <ion-list>
             <ion-item style="padding: 12px 0px 12px 0px">
                 <ion-row>
-                    <ion-col>
-                        <ion-input placeholder="Bodega Origen">{{code0}}</ion-input>
+                    <ion-col size="9">
+                        <ion-input placeholder="Bodega Origen" value={{code0}}></ion-input>
                     </ion-col>
                     <ion-col>
-                        <ion-button (click)="scan0()">
-                            Escanear
+                        <ion-button (click)="scan0()" color="light" class="buttonScan">
+                            <ion-icon name="barcode"></ion-icon>
                         </ion-button>
                     </ion-col>
                 </ion-row>
@@ -25,12 +25,12 @@
 
             <ion-item style="padding: 12px 0px 12px 0px">
                 <ion-row>
-                    <ion-col>
+                    <ion-col size="9">
                         <ion-input placeholder="Bodega Destino">{{code1}}</ion-input>
                     </ion-col>
                     <ion-col>
-                        <ion-button (click)="scan1()">
-                            Escanear
+                        <ion-button (click)="scan1()" color="light" class="buttonScan">
+                            <ion-icon name="barcode"></ion-icon>
                         </ion-button>
                     </ion-col>
                 </ion-row>
@@ -38,12 +38,12 @@
 
             <ion-item style="padding: 12px 0px 12px 0px">
                 <ion-row>
-                    <ion-col>
+                    <ion-col size="9">
                         <ion-input placeholder="Articulo">{{code2}}</ion-input>
                     </ion-col>
                     <ion-col>
-                        <ion-button (click)="scan2()">
-                            Escanear
+                        <ion-button (click)="scan2()" color="light" class="buttonScan">
+                            <ion-icon name="barcode"></ion-icon>
                         </ion-button>
                     </ion-col>
                 </ion-row>
@@ -51,12 +51,12 @@
 
             <ion-item style="padding: 12px 0px 12px 0px">
                 <ion-row>
-                    <ion-col>
+                    <ion-col size="9">
                         <ion-input placeholder="Cantidad">{{code3}}</ion-input>
                     </ion-col>
                     <ion-col>
-                        <ion-button (click)="scan3()">
-                            Escanear
+                        <ion-button (click)="scan3()" color="light" class="buttonScan">
+                            <ion-icon name="barcode"></ion-icon>
                         </ion-button>
                     </ion-col>
                 </ion-row>
@@ -65,7 +65,7 @@
         </ion-list>
 
         <ion-row>
-            <ion-col class="col-12">
+            <ion-col>
 
                 <ion-button type="">Limpiar</ion-button>
 
