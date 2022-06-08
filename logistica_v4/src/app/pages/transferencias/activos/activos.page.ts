@@ -22,19 +22,19 @@ export class ActivosPage implements OnInit {
   }
 
 
-  scanBarCode(id) {
+//   scanBarCode(id) {
 
-    this.barcodeScanner.scan().then(barcodeData => {
-        for (var i = 0; i < this.main2.length; i++) {
-            if (this.main2[i].id == id) {
-                this.main2[i].scannedBarCode = barcodeData.text;
-                break;
-            }
-        }
-    }, (err) => {
-        console.log('Error: ', err);
-    });
-}
+//     this.barcodeScanner.scan().then(barcodeData => {
+//         for (var i = 0; i < this.main2.length; i++) {
+//             if (this.main2[i].id == id) {
+//                 this.main2[i].scannedBarCode = barcodeData.text;
+//                 break;
+//             }
+//         }
+//     }, (err) => {
+//         console.log('Error: ', err);
+//     });
+// }
 
 
   scan0(){

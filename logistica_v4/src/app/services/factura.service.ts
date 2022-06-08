@@ -4,27 +4,16 @@ import { environment } from '../../environments/environment';
 import { Observable } from 'rxjs';
 
 
-// const URL = 'https://fa-eshh-test-saasfaprod1.fa.ocs.oraclecloud.com/fscmRestApi/resources/11.13.18.05/invoices';
-// const URL = environment.url;
+const URL = environment.url;
+const options: any = {
 
-// const passWord = environment.passWord;
-// const userName = environment.userName;
+  headers: new HttpHeaders({
+    ' Content-Type ' : ' aplication/json ',
+    Authorization: 'Basic' + btoa('IntegrationUserERP:icsJurasik$123')
+  }),
+  params: new HttpParams().set
 
-
-// const options: any = {
-
-//   headers: new HttpHeaders({
-//     ' Content-Type ' : ' aplication/json ',
-//     Authorization: 'Basic' + btoa('IntegrationUserERP:icsJurasik$123')
-//   }),
-//   params: new HttpParams().set
-
-// };
-
-// options.headers = new HttpHeaders({ accept: 'application/json',
-//          Authorization: "Basic " + btoa( userName + ":" + passWord),
-//          'Content-Type': 'application/json'
-// });
+};
 
 
 @Injectable({
@@ -32,36 +21,70 @@ import { Observable } from 'rxjs';
 })
 export class FacturaService {
 
+  constructor( private http: HttpClient) {}
 
-  // eslint-disable-next-line @typescript-eslint/naming-convention
+  postFactura(): Observable<any> {
 
+    return this.http.post(`${URL}/fscmRestApi/resources/11.13.18.05/invoices`,
+     { this: this.http.post(URL, options)
+      .subscribe(res => {
 
-  constructor( private http: HttpClient) {
+      console.log(res['_body']);
 
+       }, (err) => {
+          console.log("Somthing went wrong!"+err);
+          })
+
+        });
   }
 
-  // postFactura(): Observable<any> {
+}
 
-  //   return this.http.post(`${URL}/fscmRestApi/resources/11.13.18.05/invoices?grant_type=password&userName='IntegrationUserERP'&passWord='icsJurasik$123`, {});
+// import { Headers } from '@angular/http';
 
-  //   // this.http.post(URL, options)
-  //   // .subscribe(res => {
+// const URL = 'https://fa-eshh-test-saasfaprod1.fa.ocs.oraclecloud.com/fscmRestApi/resources/11.13.18.05/invoices';
 
-  //   // console.log(res['_body']);
+  // options.headers = new HttpHeaders({ accept: 'application/json',
+//          Authorization: "Basic " + btoa( userName + ":" + passWord),
+//          'Content-Type': 'application/json'
+// });
 
-  //   //  }, (err) => {
-  //   //     console.log("Somthing went wrong!"+err);
-  //   //     });
+// service2(){
+//   const Options = {
+//     headers: new HttpHeaders({
+//       'Content-Type':  'application/json',
+//       'Authorization': 'Basic ' + btoa('username:password')
+//     })
+//   };
+// }
+// postFactura():Observable<any>{
+
+//   let headers: Headers = new Headers();
+// headers.append('Authorization', 'Basic ' + btoa("Userid:password") );
+// headers.append("Content-Type", "application/json");
+
+// let options = new RequestOptions({ headers: headers });
+// return this.http.post(this.URL, options)
+//   .map((response: Response) => {
+//     console.log(response);
+//   }).subscribe();
+// }
+// }
 
 
-  // }
+// const passWord = environment.passWord;
+// const userName = environment.userName;
 
 
+// const httpOptions = {
+//   headers: new HttpHeaders({
+//     'Content-Type':  'application/json',
+//     'Authorization': 'Basic ' + btoa('IntegrationUserERP:icsJurasik$123')
+//   })
+// };
 
-
-  }
-
-
-
+// getPosts(): Observable<AObjects[]>{
+//   return this.http.get<AObjects[]>(this.postsURL, httpOptions);
+// }
 
 

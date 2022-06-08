@@ -14,12 +14,12 @@
             <ion-item style="padding: 12px 0px 12px 0px">
                 <ion-row>
                     <ion-col size="9">
-                        <ion-input placeholder="Bodega Origen">{{code0}}</ion-input>
+                        <ion-input placeholder="Bodega Origen" value={{code0}}></ion-input>
                     </ion-col>
                     <ion-col>
-                        <ion-button (click)="scan0()" color="light" class="buttonScan">
-                            <ion-icon name="barcode"></ion-icon>
-                        </ion-button>
+                        <!-- <ion-button (click)="scan0()" color="light" class="buttonScan"> -->
+                        <ion-icon name="barcode" (click)="scan0()" class="buttonScan"></ion-icon>
+                        <!-- </ion-button> -->
                     </ion-col>
                 </ion-row>
             </ion-item>
@@ -27,12 +27,12 @@
             <ion-item style="padding: 12px 0px 12px 0px">
                 <ion-row>
                     <ion-col size="9">
-                        <ion-input placeholder="Bodega Destino">{{code1}}</ion-input>
+                        <ion-input placeholder="Bodega Destino" value={{code1}}></ion-input>
                     </ion-col>
                     <ion-col>
-                        <ion-button (click)="scan1()" color="light" class="buttonScan">
-                            <ion-icon name="barcode"></ion-icon>
-                        </ion-button>
+                        <!-- <ion-button (click)="scan1()" color="light" class="buttonScan"> -->
+                        <ion-icon name="barcode" (click)="scan1()" class="buttonScan"></ion-icon>
+                        <!-- </ion-button> -->
                     </ion-col>
                 </ion-row>
             </ion-item>
@@ -40,12 +40,12 @@
             <ion-item style="padding: 12px 0px 12px 0px">
                 <ion-row>
                     <ion-col size="9">
-                        <ion-input placeholder="Ubicacion Origen">{{code2}}</ion-input>
+                        <ion-input placeholder="Ubicacion Origen" value={{code2}}></ion-input>
                     </ion-col>
                     <ion-col>
-                        <ion-button (click)="scan2()" color="light" class="buttonScan">
-                            <ion-icon name="barcode"></ion-icon>
-                        </ion-button>
+                        <!-- <ion-button (click)="scan2()" color="light" class="buttonScan"> -->
+                        <ion-icon name="barcode" (click)="scan2()" class="buttonScan"></ion-icon>
+                        <!-- </ion-button> -->
                     </ion-col>
                 </ion-row>
             </ion-item>
@@ -53,12 +53,12 @@
             <ion-item style="padding: 12px 0px 12px 0px">
                 <ion-row>
                     <ion-col size="9">
-                        <ion-input placeholder="Ubicacion Destino">{{code3}}</ion-input>
+                        <ion-input placeholder="Ubicacion Destino" value={{code3}}></ion-input>
                     </ion-col>
                     <ion-col>
-                        <ion-button (click)="scan3()" color="light" class="buttonScan ">
-                            <ion-icon name="barcode"></ion-icon>
-                        </ion-button>
+                        <!-- <ion-button (click)="scan3()"  class="buttonScan "> -->
+                        <ion-icon name="barcode" (click)="scan3()" class="buttonScan "></ion-icon>
+                        <!-- </ion-button> -->
                     </ion-col>
                 </ion-row>
             </ion-item>
@@ -66,12 +66,12 @@
             <ion-item style="padding: 12px 0px 12px 0px">
                 <ion-row>
                     <ion-col size="9">
-                        <ion-input placeholder="Articulo">{{code4}}</ion-input>
+                        <ion-input placeholder="Articulo" value={{code4}}></ion-input>
                     </ion-col>
                     <ion-col>
-                        <ion-button (click)="scan4()" color="light" class="buttonScan ">
-                            <ion-icon name="barcode"></ion-icon>
-                        </ion-button>
+                        <!-- <ion-button (click)="scan4()" color="light" class="buttonScan "> -->
+                        <ion-icon name="barcode" (click)="scan4()" class="buttonScan"></ion-icon>
+                        <!-- </ion-button> -->
                     </ion-col>
                 </ion-row>
             </ion-item>
@@ -79,7 +79,7 @@
             <ion-item style="padding: 12px 0px 12px 0px">
                 <ion-row>
                     <ion-col size="9">
-                        <ion-input placeholder="Cantidad">{{code5}}</ion-input>
+                        <ion-input placeholder="Cantidad" value={{code5}}></ion-input>
                     </ion-col>
                     <ion-col>
                         <!-- <ion-button (click)="scan5()" color="light" class="buttonScan "> -->

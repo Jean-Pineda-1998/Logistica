@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FacturaService } from 'src/app/services/factura.service';
 
 @Component({
   selector: 'app-factura',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FacturaPage implements OnInit {
 
-  constructor() { }
+  constructor( private service: FacturaService) { }
 
   ngOnInit() {
+
+  }
+
+  postFactura(){
+
   }
 
 }
