@@ -1,19 +1,25 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
+import {HttpClient, HttpErrorResponse, HttpHeaders, HttpParams} from '@angular/common/http';
 import { environment } from '../../environments/environment';
-import { Observable } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
+import { catchError, retry } from 'rxjs/operators';
+import {error} from "protractor";
+
 
 
 const URL = environment.url;
+
 const options: any = {
 
   headers: new HttpHeaders({
-    ' Content-Type ' : ' aplication/json ',
-    Authorization: 'Basic' + btoa('IntegrationUserERP:icsJurasik$123')
-  }),
+    // ' Content-Type ' : ' application/json ',
+    Authorization: 'Basic ' + btoa('IntegrationUserERP:icsJurasik$123')
+  })
+  ,
   params: new HttpParams().set
 
 };
+
 
 
 @Injectable({
@@ -23,68 +29,44 @@ export class FacturaService {
 
   constructor( private http: HttpClient) {}
 
-  postFactura(): Observable<any> {
 
-    return this.http.post(`${URL}/fscmRestApi/resources/11.13.18.05/invoices`,
-     { this: this.http.post(URL, options)
-      .subscribe(res => {
 
-      console.log(res['_body']);
+  postFactura(body: {})  {
 
-       }, (err) => {
-          console.log("Somthing went wrong!"+err);
-          })
+    //const rest = '{"InvoiceNumber":"38_Elopez_Jean","InvoiceCurrency":"COP","PaymentCurrency":"COP","InvoiceAmount":"900","InvoiceDate":"2022-05-26T14:59:00-05:00","BusinessUnit":"Unidad_Negocio","Supplier":"Comercial De Empaques Y Papeles S.A.S","SupplierSite":"PRINCIPAL"}';
 
-        });
+    console.log(options);
+    console.log(body);
+
+    let idFactura = 'GERALD';
+
+    new Promise((resolve) => {
+      this.http
+        .post(`${URL}/fscmRestApi/resources/11.13.18.05/invoices`,body ,options)
+        .subscribe(async (resp) => {
+         if (resp != null){
+           resolve (true);
+
+
+
+       idFactura = resp['InvoiceId'];
+
+
+       }else{
+           resolve (false);
+
+         }
+         });
+
+    });
+     console.log(idFactura);
+      return idFactura;
+
+
+
   }
 
+
+
+
 }
-
-// import { Headers } from '@angular/http';
-
-// const URL = 'https://fa-eshh-test-saasfaprod1.fa.ocs.oraclecloud.com/fscmRestApi/resources/11.13.18.05/invoices';
-
-  // options.headers = new HttpHeaders({ accept: 'application/json',
-//          Authorization: "Basic " + btoa( userName + ":" + passWord),
-//          'Content-Type': 'application/json'
-// });
-
-// service2(){
-//   const Options = {
-//     headers: new HttpHeaders({
-//       'Content-Type':  'application/json',
-//       'Authorization': 'Basic ' + btoa('username:password')
-//     })
-//   };
-// }
-// postFactura():Observable<any>{
-
-//   let headers: Headers = new Headers();
-// headers.append('Authorization', 'Basic ' + btoa("Userid:password") );
-// headers.append("Content-Type", "application/json");
-
-// let options = new RequestOptions({ headers: headers });
-// return this.http.post(this.URL, options)
-//   .map((response: Response) => {
-//     console.log(response);
-//   }).subscribe();
-// }
-// }
-
-
-// const passWord = environment.passWord;
-// const userName = environment.userName;
-
-
-// const httpOptions = {
-//   headers: new HttpHeaders({
-//     'Content-Type':  'application/json',
-//     'Authorization': 'Basic ' + btoa('IntegrationUserERP:icsJurasik$123')
-//   })
-// };
-
-// getPosts(): Observable<AObjects[]>{
-//   return this.http.get<AObjects[]>(this.postsURL, httpOptions);
-// }
-
-
